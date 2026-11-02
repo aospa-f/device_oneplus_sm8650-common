@@ -14,6 +14,10 @@ on boot
     # Display
     chmod 0000 /sys/kernel/oplus_display/hbm
 
+    # Enable screen off touch gestures: left/right Vee, circle, one-finger up/down.
+    # Bit mask uses gesture IDs from the touch HAL (246 + id).
+    write /proc/touchpanel/double_tap_enable_indep 3184
+
     # Allow access for fingerprint HAL touch node
     chown system system /proc/touchpanel/fingerprint_hal
     chmod 0660 /proc/touchpanel/fingerprint_hal
