@@ -367,7 +367,8 @@ PRODUCT_SHIPPING_API_LEVEL += $(BOARD_SHIPPING_API_LEVEL)
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/oplus
+    hardware/oplus \
+    vendor/oneplus/sm8650-oss/vendor.oplus.hardware.touch@2.0-service
 
 # Storage
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
