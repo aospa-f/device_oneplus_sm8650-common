@@ -149,7 +149,7 @@ ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_PACKAGES += \
     IFAAService \
     libshims_aidl_fingerprint_v3.oplus \
-    vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff.prebuilt \
+    vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff \
     vendor.oplus.hardware.touch-V1-ndk
 
 PRODUCT_COPY_FILES += \
