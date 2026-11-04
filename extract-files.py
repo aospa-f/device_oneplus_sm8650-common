@@ -148,6 +148,11 @@ blob_fixups: blob_fixups_user_type = {
     # The stock FOD HAL needs the sensor props shim to report the optical sensor correctly.
     'odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff': blob_fixup()
         .add_needed('libshims_aidl_fingerprint_v3.oplus.so'),
+    'odm/etc/init/vendor.oplus.hardware.charger-V11-service.rc': blob_fixup()
+        .regex_replace(
+            r'(    chmod 0666 /sys/class/oplus_chg/battery/normal_cool_down\n)',
+            r'\1    chmod 0666 /sys/class/oplus_chg/battery/cool_down\n',
+        ),
     'odm/etc/gps.conf': blob_fixup()
         .binary_regex_replace(b'com.oplus.locationproxy', b'com.google.android.carrierlocation')
         .binary_regex_replace(b'DEBUG_LEVEL = 3', b'DEBUG_LEVEL = 2'),
