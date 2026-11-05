@@ -160,6 +160,10 @@ PRODUCT_COPY_FILES += \
 $(call soong_config_set,surfaceflinger,udfps_lib,//hardware/oplus:libudfps_extension.oplus)
 endif
 
+# LTPO
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.oplus.ltpo.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.oplus.ltpo.rc
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \

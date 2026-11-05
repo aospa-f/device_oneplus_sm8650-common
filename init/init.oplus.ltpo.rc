@@ -1,0 +1,5 @@
+# Allow the system app that drives the refresh-rate tile to update the ADFR
+# minimum FPS so adaptive modes can reach the panel's 1 Hz idle state.
+on boot
+    chown system system /sys/kernel/oplus_display/min_fps
+    chmod 0664 /sys/kernel/oplus_display/min_fps
