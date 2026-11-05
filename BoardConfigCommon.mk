@@ -209,6 +209,7 @@ VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # SEPolicy
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 # UFS
 SOONG_CONFIG_NAMESPACES += ufsbsg
@@ -252,3 +253,5 @@ TARGET_POWER_FEATURE_EXT_LIB := libpowerfeature_ext_oplus
 
 # Include the proprietary files BoardConfig.
 include vendor/oneplus/sm8650-common/BoardConfigVendor.mk
+
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += device/oneplus/sm8650-common/duck-rkp/compatibility_matrix.xml
