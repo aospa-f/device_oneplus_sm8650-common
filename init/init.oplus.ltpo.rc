@@ -1,5 +1,5 @@
-# Allow the system app that drives the refresh-rate tile to update the ADFR
-# minimum FPS so adaptive modes can reach the panel's 1 Hz idle state.
+# The OPlus display driver creates min_fps owned by system, but with a
+# restrictive mode. Make it writable by the system app that keeps adaptive
+# modes at the panel's 1 Hz idle rate.
 on boot
-    chown system system /sys/kernel/oplus_display/min_fps
-    chmod 0664 /sys/kernel/oplus_display/min_fps
+    chmod 0666 /sys/kernel/oplus_display/min_fps
