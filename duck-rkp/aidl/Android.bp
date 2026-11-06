@@ -16,12 +16,5 @@ aidl_interface {
             enabled: false,
         },
     },
-    frozen: true,
-    versions_with_info: [
-        {
-            version: "1",
-            imports: [],
-        },
-    ],
-
+    frozen: false,
 }
