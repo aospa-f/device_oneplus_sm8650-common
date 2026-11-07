@@ -258,6 +258,8 @@ PRODUCT_PACKAGES += \
 ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp \
+    vendor.oplus.hardware.nfc_aidl-service \
+    vendor.oplus.hardware.nfcExtns-service \
     com.android.nfc_extras \
     Tag
 
