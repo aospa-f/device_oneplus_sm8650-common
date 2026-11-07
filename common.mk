@@ -51,6 +51,10 @@ PRODUCT_PACKAGES += \
 AUDIO_HAL_DIR := vendor/qcom/opensource/audio-hal/primary-hal
 CONFIG_HAL_SRC_DIR := $(AUDIO_HAL_DIR)/configs/pineapple
 CONFIG_PAL_SRC_DIR := $(AUDIO_HAL_DIR)/../../pal/configs/pineapple
+# Classic NFC stack (prebuilt from OOS 16.0.10.600) - matches the OOS vendor NFC HAL
+PRODUCT_COPY_FILES += \
+    vendor/oneplus/sm8650-oss/nfc/NfcNci.xml:/system/etc/permissions/NfcNci.xml
+
 QCV_FAMILY_SKUS := pineapple cliffs
 
 PRODUCT_COPY_FILES += \
