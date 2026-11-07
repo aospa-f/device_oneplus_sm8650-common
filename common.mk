@@ -150,7 +150,7 @@ PRODUCT_PACKAGES += \
     IFAAService \
     android.hardware.biometrics.fingerprint-V3-ndk.vendor \
     libshims_aidl_fingerprint_v3.oplus \
-    vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff_oss \
+    vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff \
     vendor.oplus.hardware.touch-V1-ndk.vendor
 
 PRODUCT_COPY_FILES += \
