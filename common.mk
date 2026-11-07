@@ -150,12 +150,11 @@ PRODUCT_PACKAGES += \
     IFAAService \
     android.hardware.biometrics.fingerprint-V3-ndk.vendor \
     libshims_aidl_fingerprint_v3.oplus \
-    vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff \
+    vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff_oss \
     vendor.oplus.hardware.touch-V1-ndk.vendor
 
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
-    vendor/oneplus/sm8650-common/proprietary/odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 $(call soong_config_set,surfaceflinger,udfps_lib,//hardware/oplus:libudfps_extension.oplus)
 endif
@@ -445,8 +444,6 @@ DEVICE_MANIFEST_FILE += \
 ODM_MANIFEST_FILES := \
     $(LOCAL_PATH)/vintf/network_manifest_odm.xml
 
-ODM_MANIFEST_FILES += \
-    vendor/oneplus/sm8650-common/proprietary/odm/etc/vintf/manifest/manifest_oplus_fingerprint_aidl_v3.xml
 endif
 
 # Virtualization service
